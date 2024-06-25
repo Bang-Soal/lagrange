@@ -5,7 +5,6 @@ import "dayjs/locale/id";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import Footer from "./Footer";
-import Nav from "./Navbar";
 import {
     AUTH_PATHS,
     DASHBOARD_PATH,
@@ -14,6 +13,7 @@ import {
     LATSOL_PATH,
     TRY_OUT_PATH,
 } from "../constants/path";
+import Navbar from "./Navbar";
 
 interface MainLayoutI {
     children: React.ReactNode;
@@ -42,7 +42,7 @@ export const MainLayout = ({ children }: MainLayoutI) => {
 
     return (
         <div className="relative">
-            {/* {!hideNav && <Nav />} */}
+            {!hideNav && <Navbar />}
             {children}
             {!hideNav && !hideFooter && <Footer />}
         </div>

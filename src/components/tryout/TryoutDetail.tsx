@@ -18,7 +18,7 @@ export default function TryoutDetail() {
         });
     }
     return (
-        <div className="flex flex-col gap-y-3 p-5">
+        <div className="flex flex-col gap-y-3 px-20 py-10">
             <div className="flex justify-between">
                 <div className="flex flex-col gap-2">
                     <h1 className="text-3xl font-bold text-gray-950">{tryoutData.name}</h1>
@@ -45,7 +45,7 @@ export default function TryoutDetail() {
                 <InfoIcon size={20} color={colors.gray[700]} />
             </div>
             {tryoutData.categories.map((category, i) => (<TryoutCategory category={category} key={i} />))}
-            <div className="grid grid-cols-3 items-center mb-2 bg-gray-50 px-6 py-4 rounded-xl">
+            <div className="grid grid-cols-2 items-center mb-2 bg-gray-50 px-6 py-4 rounded-xl">
                 <h1 className="font-bold text-gray-700">Total Pengerjaan</h1>
                 <div className="flex justify-end items-center gap-2">
                     <span className="flex rounded-full items-center gap-1 border px-4 py-1 border-gray-300 bg-gray-200">
