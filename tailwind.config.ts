@@ -1,8 +1,7 @@
 import { getIconCollections, iconsPlugin } from "@egoist/tailwindcss-icons";
 import type { Config } from "tailwindcss";
-import colors from "tailwindcss/colors";
 import defaultTheme from "tailwindcss/defaultTheme";
-import { createThemes } from "tw-colors";
+
 
 const config: Config = {
   darkMode: ["class"],
@@ -151,6 +150,22 @@ const config: Config = {
           to: { opacity: "0", transform: "translateY(-4px)  scale(0.9)" },
         },
       },
+      colors: {
+        "surface": {
+          '100': '#f3f4f6',
+          '200': '#e5e7eb',
+          '300': '#d1d5db',
+          '400': '#9ca3af',
+          '500': '#6b7280',
+          '600': '#4b5563',
+          '700': '#374151'
+        },
+        "content": {
+          '100': '#111827',
+          '200': '#374151',
+          '300': '#6b7280'
+        }
+      }
     },
     screens: {
       xs: "475px",
@@ -161,23 +176,6 @@ const config: Config = {
     require("@tailwindcss/container-queries"),
     require("tailwindcss-animate"),
     require("tailwind-gradient-mask-image"),
-    createThemes({
-      light: {
-        // surfaces
-        "surface-100": colors.white,
-        "surface-200": colors.gray[100],
-        "surface-300": colors.gray[200],
-        "surface-400": colors.gray[300],
-        "surface-500": colors.gray[400],
-        "surface-600": colors.gray[500],
-        "surface-700": colors.gray[600],
-
-        // contents
-        "content-100": colors.gray[900],
-        "content-200": colors.gray[700],
-        "content-300": colors.gray[500],
-      },
-    }),
     iconsPlugin({
       collections: getIconCollections(["bi", "logos", "ph"]),
     }),
